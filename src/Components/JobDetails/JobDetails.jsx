@@ -5,6 +5,9 @@ import { MdOutlinePermPhoneMsg } from "react-icons/md";
 import { PiAddressBookTabs } from "react-icons/pi";
 import { TfiEmail } from "react-icons/tfi";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../../Utiliy/Utility";
 
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -18,17 +21,20 @@ const JobDetails = () => {
     company_name,
     job_title,
     location,
-    remote_or_onsite,
-    job_type,
     salary,
     job_description,
     job_responsibility,
-    educational_requirements,
-    experiences,
+
     contact_information,
   } = job;
 
   const { phone, email, address } = contact_information;
+
+
+  const handleJobApplied=()=>{
+      saveJobApplication(Id )
+  
+  }
 
   return (
     <div>
@@ -101,8 +107,9 @@ const JobDetails = () => {
             <span>{address}</span>
           </div>
          </div>
-         <button className="btn btn-wide btn-accent text-md text-white">Apply Now</button>
+         <button onClick={()=>handleJobApplied('hi there')} className="btn btn-wide btn-accent text-md text-white">Apply Now</button>
         </div>
+        <ToastContainer className='text-orange-300'></ToastContainer>
       </div>
     </div>
   );
