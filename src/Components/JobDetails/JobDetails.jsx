@@ -32,7 +32,7 @@ const JobDetails = () => {
 
 
   const handleJobApplied=()=>{
-      saveJobApplication(Id )
+      saveJobApplication(idInt )
   
   }
 
