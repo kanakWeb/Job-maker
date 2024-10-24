@@ -1,9 +1,10 @@
 import React from 'react';
+import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 
 const Jobs = () => {
     return (
         <div>
-          <h2>This Is jobs</h2>  
+         <FeaturedJobs></FeaturedJobs>
         </div>
     );
 };

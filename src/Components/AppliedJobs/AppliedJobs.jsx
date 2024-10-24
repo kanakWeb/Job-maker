@@ -14,7 +14,6 @@ const AppliedJobs = () => {
     } else if (filter === "remote") {
       const remoteJob = appliedJobs.filter(
         (job) => job.remote_or_onsite === "Remote"
-
       );
       setDisplayJobs(remoteJob);
     } else if (filter === "onsite") {
@@ -50,10 +49,9 @@ const AppliedJobs = () => {
         This is AppliedJobs- {appliedJobs.length}
       </h2>
       <div className=" flex justify-end mr-32 py-9">
-        <details className="dropdown ">
-          <summary className="py-1 rounded-full px-3 text-lg text-amber-100 font-medium bg-sky-500 m-1">
-            {" "}
-            Option
+        <details className="dropdown p-3">
+          <summary className=" rounded-full px-2 text-lg  font-medium shadow-sm shadow-stone-800 ">
+      Jobs
           </summary>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-24 p-2 shadow">
             <li>

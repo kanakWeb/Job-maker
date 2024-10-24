@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 import Root from "./Components/Root/Root";
 import Home from "./Components/Home/Home";
@@ -11,6 +12,8 @@ import Jobs from "./Components/Jobs/Jobs";
 import Statistics from "./Components/Statistics/Statistics";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import JobDetails from "./Components/JobDetails/JobDetails";
+import SignIn from "./Components/Authentication/SignIn";
+import HeroRegister from "./Components/Authentication/HeroRegiester";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics></Statistics>,
+      },
+      {
+        path: "/HeroRegister",
+        element: <HeroRegister></HeroRegister>,
+      },
+      {
+        path: "/SignIn",
+        element: <SignIn></SignIn>,
       },
     ],
   },
